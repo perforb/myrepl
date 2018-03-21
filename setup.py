@@ -12,14 +12,14 @@ REQUIRES = [
 ]
 
 setup(
-    name='mycopier',
+    name='myreplica',
     version='0.0.1',
     description='A tool that copies data of MySQL tables.',
     platforms=['linux', 'osx', 'unix'],
-    packages=['mycopier'],
+    packages=['myreplica'],
     author='perforb',
     author_email='dev.perfurmed.garden@gmail.com',
-    url='https://github.com/perforb/mycopier-python',
+    url='https://github.com/perforb/myreplica',
     license='MIT',
     keywords='mysql copy',
     classifiers=[
@@ -48,7 +48,7 @@ setup(
     data_files=[],
     entry_points={
         'console_scripts': [
-            'mycopier=mycopier.excecutor:main',
+            'myreplica=myreplica.excecutor:main',
         ],
     },
 )
