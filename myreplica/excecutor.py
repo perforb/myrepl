@@ -15,28 +15,39 @@ def parse_argument():
     parser.set_defaults(
         source=None,
         destination=None,
-        dbsettings='/etc/myreplica.ini',
+        config='/etc/myreplica.ini',
         dryrun=True,
         verbose=False,
     )
 
-    parser.add_argument('-s',
-                        '--source',
-                        required=True,
-                        dest='source_env',
-                        help='source environment')
-    parser.add_argument('-d',
-                        '--destination',
-                        required=True,
-                        dest='dest_env',
-                        help='destination environment')
-    parser.add_argument('--dryrun',
-                        action='store_true',
-                        help='dry run if this option is passed.')
-    parser.add_argument('-v',
-                        '--verbose',
-                        action='store_true',
-                        help='set verbose mode')
+    parser.add_argument(
+        '-s',
+        '--source',
+        required=True,
+        help='source environment'
+    )
+    parser.add_argument(
+        '-d',
+        '--destination',
+        required=True,
+        help='destination environment'
+    )
+    parser.add_argument(
+        '-c',
+        '--config',
+        help='database settings'
+    )
+    parser.add_argument(
+        '--dryrun',
+        action='store_true',
+        help='dry run if this option is passed'
+    )
+    parser.add_argument(
+        '-v',
+        '--verbose',
+        action='store_true',
+        help='verbose mode if this option is passed'
+    )
 
     args = parser.parse_args()
     if args.verbose:
