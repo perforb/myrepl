@@ -16,7 +16,7 @@ def parse_argument():
         source=None,
         destination=None,
         config='/etc/myreplica.ini',
-        dryrun=True,
+        dryrun=False,
         verbose=False,
     )
 
