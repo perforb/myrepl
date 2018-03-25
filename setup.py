@@ -6,21 +6,25 @@ https://packaging.python.org/en/latest/distributing.html
 https://github.com/pypa/sampleproject
 """
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
-REQUIRES = [
-]
+with open('README.rst') as f:
+    readme = f.read()
+
+with open('LICENSE.txt') as f:
+    license = f.read()
 
 setup(
     name='myreplica',
     version='0.0.1',
-    description='A tool that copies data of MySQL tables.',
+    description='A tool that copies some tables of MySQL.',
+    long_description=readme,
     platforms=['linux', 'osx', 'unix'],
-    packages=['myreplica'],
+    packages=find_packages(exclude=('tests')),
     author='perforb',
     author_email='dev.perfurmed.garden@gmail.com',
     url='https://github.com/perforb/myreplica',
-    license='MIT',
+    license=license,
     keywords='mysql copy',
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -30,25 +34,11 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Topic :: Database',
     ],
-    install_requires=REQUIRES,
-    extras_require={
-        'dev': ['check-manifest'],
-        'test': ['coverage'],
-    },
-    tests_require=[
-        'pytest',
-        'pytest-pep8',
-        'pytest-flakes',
-        'tox',
-        'mock',
-    ],
-    include_package_data=True,
-    package_data={
-    },
-    data_files=[],
+    install_requires=[],
     entry_points={
         'console_scripts': [
             'myreplica=myreplica.excecutor:main',
         ],
     },
+    test_suite='tests'
 )
