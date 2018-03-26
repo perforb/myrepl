@@ -17,7 +17,7 @@ with open('LICENSE.txt') as f:
 setup(
     name='myreplica',
     version='0.0.1',
-    description='A tool that copies some tables of MySQL.',
+    description='A tool that creates replica of MySQL tables or database.',
     long_description=readme,
     platforms=['linux', 'osx', 'unix'],
     packages=find_packages(exclude=('tests')),
@@ -37,7 +37,8 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'myreplica=myreplica.excecutor:main',
+            'myreplica=myreplica.myrepltb:main',
+            'myreplica=myreplica.myrepldb:main',
         ],
     },
     test_suite='tests'

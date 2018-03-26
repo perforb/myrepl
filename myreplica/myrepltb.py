@@ -3,10 +3,26 @@
 import argparse
 import logging
 
-logger = logging.getLogger('myreplica')
+logger = logging.getLogger('myrepltb')
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
+
+
+def import_data():
+    pass
+
+
+def export_data():
+    pass
+
+
+def backup():
+    pass
+
+
+def cleanup():
+    pass
 
 
 def parse_argument():
