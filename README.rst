@@ -1,2 +1,2 @@
-myreplica
+myrepl
 ---------
