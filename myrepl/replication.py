@@ -1,19 +1,18 @@
 # -*- coding: utf-8 -*-
-
 import argparse
 import logging
 
-logger = logging.getLogger('myrepltb')
+logger = logging.getLogger('myrepl')
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 logger.addHandler(ch)
 
 
-def import_data():
+def dump():
     pass
 
 
-def export_data():
+def load():
     pass
 
 
@@ -30,7 +29,7 @@ def parse_argument():
     parser.set_defaults(
         source=None,
         destination=None,
-        config='/etc/myreplica.ini',
+        config='/etc/myrepl.ini',
         dryrun=False,
         verbose=False,
     )
