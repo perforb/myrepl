@@ -15,7 +15,7 @@ with open('LICENSE.txt') as f:
     license = f.read()
 
 setup(
-    name='myreplica',
+    name='myrepl',
     version='0.0.1',
     description='A tool that creates replica of MySQL database.',
     long_description=readme,
@@ -23,7 +23,7 @@ setup(
     packages=find_packages(exclude=('tests')),
     author='perforb',
     author_email='dev.perfurmed.garden@gmail.com',
-    url='https://github.com/perforb/myreplica',
+    url='https://github.com/perforb/myrepl',
     license=license,
     keywords='mysql copy',
     classifiers=[
@@ -37,7 +37,7 @@ setup(
     install_requires=[],
     entry_points={
         'console_scripts': [
-            'myrepl=myreplica.myrepl:main',
+            'myrepl=myrepl.replication:main',
         ],
     },
     test_suite='tests'
